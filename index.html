@@ -1,0 +1,160 @@
+<html>
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/lightbox.css" />
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
+		<script src="js/lightbox.min.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#screenshots .screenshots').magnificPopup({
+					delegate: 'a',
+					type: 'image',
+					closeOnContentClick: false,
+					closeBtnInside: false,
+					mainClass: 'mfp-with-zoom mfp-img-mobile',
+					image: {
+						verticalFit: true,
+					},
+					gallery: {
+						enabled: true
+					},
+					zoom: {
+					    enabled: true, // By default it's false, so don't forget to enable it
+
+					    duration: 300, // duration of the effect, in milliseconds
+					    easing: 'ease-in-out', // CSS transition easing function 
+
+					    // The "opener" function should return the element from which popup will be zoomed in
+					    // and to which popup will be scaled down
+					    // By defailt it looks for an image tag:
+					    opener: function(openerElement) {
+							// openerElement is the element on which popup was initialized, in this case its <a> tag
+							// you don't need to add "opener" option if this code matches your needs, it's defailt one.
+							return openerElement.is('img') ? openerElement : openerElement.find('img');
+					    }
+					}
+					
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<section id="header">
+			<div class="content">
+				<img src="img/title.png"></img>
+				<img id="lightning" src="img/lightning.png"></img>
+				<img id="logo" src="img/logo.png"></img>
+				<div id="info">
+					<h4>Coming July 2014</h4>
+					<h5><span>Windows, Mac, Linux<span></h5>
+				</div>
+			</div>
+		</section>
+
+		<section id="description">
+			<div class="content">
+				<div class="terminal">
+					[root@storymode ~] man StoryMode
+					<h3>
+						<div class="title">
+							<b>STORYMODE</b>
+							<br/>
+							A game about Crafting
+						</div>
+					</h3>
+					<p>
+						Join our human adventurer on an adventure! Is this adventurer even a hero? Is he even actually an adventurer?  Who cares? Not the <i>Crafting Goddess Joann</i>, apparently! All she wants is a slave to make crap for her, and that slave appears to be this poor soul. I guess now that he's been chosen by a trans-dimensional entity to do some kind of bidding he doesn't really have a choice of sorts.
+					</p>
+					<p>At least
+						there's some fun to be had as he traverses the dungeons generated from your old high-school reports and porn collections.
+					</p>
+					<p>
+						<center>
+							Wait a second, did I just say <b><i>old high-school reports</i></b>?!
+							They have value now?
+							<br/>You sure bet!
+						</center>
+						<br/>
+						You'll have to delve deep into your hard drive's dungeons to create the list of items the goddess has bestowed upon you to create.  All the dungeons are 
+						randomly generated from the files that you select on your hard drive, with bigger files creating bigger dungeons, and different file 
+						types designating different kinds of loot you can find.  Even item, crafting, and monsters have generated names with randomly selected 
+						comedic, and occasionally relatively offensive, adjectives attached.  Even the requirements to make the crafted items are random!  
+						Who cares if any of this makes sense?!  Obviously not the guy who developed the game!
+					</p>
+					<p>
+						StoryMode is a parody rogue-like made with original planned development time lasting a week in order to
+						show a demo at TooManyGames 2014 in Philadelphia, PA.  I describe it as a traditional rogue-like that takes the well-known 
+						randomness of the genre and cranks it to 11!
+					</p>
+					<h4>
+						<div class="title">
+							Page 1 / 0
+						</div>
+					</h4>
+					<h6>You read it all, now get to crafting</h6>
+				</div>
+			</div>
+		</section> 
+		
+		<section id="credits">
+			<div class="content">
+				<h2>Credits</h2>
+				<h3>Graphics & Programming</h3>
+				<h4>Nicholas Hydock<h4>
+				<br/>
+				<h3>Ideas, Suggestions, Emotional Support, and Bros4Lyfe</h3>
+				<h4>Patrick Flanagan<h4>
+				<h4>Matthew Hydock</h4>
+				<h4>Andrew Hoffman<h4>
+				<br/>
+				<h3>All Music Available on FreeMusicArchive.org</h3>
+			</div>
+		</section>
+
+		<section id="screenshots">
+			
+			<div class="content">
+				<h2>
+					Screenshots
+				</h2>
+				<center>	
+				<div class="screenshots">
+					<a href="img/screenshots/001.png" title="" ><img src="img/screenshots/001.png" width="175" height="100"></img></a>
+					<a href="img/screenshots/002.png" title="" ><img src="img/screenshots/002.png" width="175" height="100"></img></a>
+					<a href="img/screenshots/003.png" title="" ><img src="img/screenshots/003.png" width="175" height="100"></img></a>
+					<a href="img/screenshots/004.png" title="" ><img src="img/screenshots/004.png" width="175" height="100"></img></a>
+					<a href="img/screenshots/005.png" title="" ><img src="img/screenshots/005.png" width="175" height="100"></img></a>
+					<a href="img/screenshots/006.png" title="" ><img src="img/screenshots/006.png" width="175" height="100"></img></a>
+					<a href="img/screenshots/007.png" title="" ><img src="img/screenshots/007.png" width="175" height="100"></img></a>
+				</div>
+				</center>
+				<h5>*Not all screenshots represent an accuration depiction of the game in its final release state.  Most I took while developing the game and I'm too lazy to update them.  Don't worry, though, there's not much one can really change when making a rougelike.</h5>
+			</div>
+		</section>
+
+		<section id="order">
+			<div class="content">
+				<h2>
+					Purchase
+				</h2>
+					
+					<p>
+						StoryMode is available at a Name-Your-Price freeware model.  
+					</p>
+					<p>
+						Payments will not be accepted until the game is officially released.
+					</p>
+				<div class="footer">
+					<img id="character" src="img/character.png"></img>
+					<img id="goddess" src="img/goddess.png"></img>
+				</div>
+			</div>
+		</section>
+		
+	</body>
+</html>

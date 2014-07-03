@@ -1,0 +1,283 @@
+body, html
+{
+	width: 100%;
+	height: auto;
+	margin: 0px;
+	padding: 0px;
+	max-width: 100%;
+}
+
+@font-face {
+    font-family: "alagard";
+    src: url("../fonts/alagard.ttf");
+}
+
+@keyframes floating {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: 10px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  90% {
+  	opacity: 0;
+  }
+  92% {
+    opacity: 1.0;
+  }
+  94% {
+  	opacity: 0;
+  }
+  96% {
+  	opacity: 0;
+  }
+  98% {
+  	opacity: 1.0;
+  }
+  100% {
+  	opacity: 0;
+  }
+}
+
+#logo
+{
+	top: 0px;
+	left:0px;
+	position: absolute;
+	animation: floating 2s infinite linear;
+	-moz-animation: floating 2s infinite linear;
+}
+
+#lightning
+{
+	top: 0px;
+	right:0px;
+	opacity: 0;
+	display: inline;
+	position: absolute;
+	animation: flash 12s infinite linear;
+	-moz-animation: flash 12s infinite linear;
+}
+
+.footer
+{
+	position: relative;
+	height: 276px;
+	margin-top: 48px;
+}
+
+#goddess
+{
+	top:0px;
+	right:0px;
+	display: inline;
+	position: absolute;
+	animation: floating 4s infinite linear;
+	-moz-animation: floating 4s infinite linear;
+}
+
+#character
+{
+	bottom: 0px;
+	left: 0px;
+	display: inline;
+	position: absolute;
+}
+
+#info
+{
+	right: 90px;
+	bottom: 60px;
+	position: absolute;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#info h4
+{
+	font-family: "alagard", monospace;
+	font-size: 2em;
+	background: none;
+}
+
+section h2
+{
+	font-family: "alagard", monospace;
+	font-weight: bold;
+	font-size: 4em;
+	background: none;
+	text-shadow: 0px 4px 0px #888;
+	color: #000;
+}
+section:nth-child(odd) h2
+{
+	color: #fff;
+}
+
+.screenshots div
+{
+	background: #fff;
+	opacity: .5;
+	color: #000;
+	transition: opacity .3s linear;
+}
+
+.screenshots div:hover
+{
+	opacity: 1.0;
+}
+
+#info h5 span
+{
+	background: #000;
+	padding-left: 2px;
+	padding-right 2px;
+	margin:;
+}
+
+#info h5
+{
+	font-family: monospace;	
+	font-size: 1.5em;
+}
+
+section
+{
+	position:relative;
+	width: 100%;
+	max-width: 100%;
+	color: #fff;
+	background: #000;
+	display: block;
+	font-family: 'Roboto', san-serif;
+}
+
+#header
+{
+	background-image: url("../img/texture.png");
+}
+
+#header .content
+{
+	max-width: 960px;
+	background-image: none;
+	border: 32px solid transparent;
+	border-image:url("../img/window.png") 64 64 repeat;
+	padding: 0px;
+}
+
+section:nth-child(even)
+{
+	color: #000;
+	background: #fff;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	box-shadow: 0px 1px 0px #fff inset,
+				0px 20px 10px -10px rgba(0,0,0,.25) inset;
+}
+
+section .content
+{
+	margin: 0px auto;
+	width: 100%;
+	max-width: 800px;
+	padding: 20px 0px;
+	position: relative;
+}
+
+#description .content
+{
+	padding: 0px 0px;
+}
+
+.terminal
+{
+	border: 2px solid #2d2d2d;
+	background: #000;
+	box-shadow: 0px 3px 5px 3px rgba(0,0,0,.425);
+	color: #fff;
+	padding: 5px;
+	font-family: monospace;
+	font-size: 1.2em;
+	padding-top: 56px;
+}
+
+.terminal:before
+{
+	content: "";
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	margin: 0px auto;
+	display: inline-block;
+	width: 800px;
+	height: 51px;
+	background-image: url("../img/term-header.png");
+	background-repeat: none;
+	font-color: rgba(0,0,0,0);
+}
+
+.terminal .title
+{
+	width: 280px;
+	background: #000;
+	padding-left: 2px;
+	padding-right 2px;
+	margin: 0px auto;
+	text-align: center;
+}
+
+.terminal h3,
+.terminal h4,h5
+{
+	background-image: url("../img/texture.png");
+	background-repeat: repeat;
+}
+
+h4
+{
+	margin-bottom: 0px;
+}
+h6
+{
+	text-align: right;
+	font-size: .8em;
+	font-weight: normal;
+	margin: 0px;
+}
+
+#screenshots h5
+{
+	text-align: center;
+	font-size: .7em;
+	font-weight: normal;
+	margin: 8px;
+	background: none;
+}
+
+#credits h3, #credits h4
+{
+	font-family:  "alagard", monospace;
+	margin: 0px auto;
+}
+
+#credits h3
+{
+	font-size: 1.5em;
+}
+
+#credits h4
+{
+	font-size: 1.4em;	
+	margin-left: 50px;
+}
