@@ -83,6 +83,7 @@ body, html
 	position: absolute;
 	animation: floating 4s infinite linear;
 	-moz-animation: floating 4s infinite linear;
+	pointer-events: none;
 }
 
 #character
@@ -280,4 +281,47 @@ h6
 {
 	font-size: 1.4em;	
 	margin-left: 50px;
+}
+
+#order .beta a
+{
+	font-family: 'alagard', monospace;
+	font-color: #fff;
+	text-shadow: 0px 2px #aaa;
+	font-size: 2em;
+	font-style: normal;
+	font-variant: normal;
+	text-decoration: none;
+	color: #fff;
+}
+
+#order .beta span
+{
+	background: #000;
+	padding: 5px;
+}
+
+#order .beta
+{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	top: 16px;
+	text-align: center;
+}
+
+#order .beta h3
+{
+	margin-top: 50px;
+	margin-bottom: 0px;
+	background: transparent;
+	background-image: url("../img/texture.png");
+	background-repeat: repeat;
+	padding: 0px;
+}
+
+#order .beta h6
+{
+	text-align: unset;
 }
