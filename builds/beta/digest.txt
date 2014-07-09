@@ -1,0 +1,5 @@
+getdown.txt = b00c400c2318c6239152e0056ac02b22
+storymode.jar = 10065eb4821345eec1f8cafa878c1528
+storymode_assets.jar = e0a9a61e7568036853c661abb6e41780
+downloader.jar = b5b40132cab1cbe8a46f9835801525f8
+digest.txt = d5ebfdd956af6b3db1ceaf07fe5d89b8

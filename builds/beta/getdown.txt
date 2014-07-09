@@ -1,0 +1,31 @@
+# The URL from which the client is downloaded
+appbase = http://nhydock.github.io/Storymode/builds/beta/
+
+#jvm
+java_min_version = 1070060
+java_location = [windows] /Storymode/jvm/java_windows.jar
+java_location = [linux] /Storymode/jvm/java_linux.jar
+jvmarg = -Dappdir=%APPDIR%
+
+# UI Configuration
+ui.name = StoryMode - A Game About Crafting
+ui.background = 000000
+ui.background_image = rsrc/bg.png
+ui.status_text = FFFFFF
+ui.status = 300, 200, 120, 30
+ui.progress_bar = FFFFFF
+ui.progress = 10, 240, 460, 20
+
+# Application jar files
+code = storymode.jar
+code = storymode_assets.jar
+
+# getdown resources
+uresource = downloader.jar
+
+# The main entry point for the application
+class = core.common.SMRunner
+storymode.class = core.common.SMRunner
+
+allow_offline = true
+
