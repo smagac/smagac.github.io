@@ -1,5 +1,12 @@
-getdown.txt = b00c400c2318c6239152e0056ac02b22
-storymode.jar = 10065eb4821345eec1f8cafa878c1528
-storymode_assets.jar = e0a9a61e7568036853c661abb6e41780
-downloader.jar = b5b40132cab1cbe8a46f9835801525f8
-digest.txt = d5ebfdd956af6b3db1ceaf07fe5d89b8
+getdown.txt = d361c011ed89f0036e522ba9cab2d782
+storymode.jar = c48e335cf2844bdf7b16682b91189d0a
+storymode_assets.jar = 0469315570b01f91f6d86e29cdf8062a
+rsrc/bg.png = 9eb5d946dfdd0650f78f7e9ab731ac7d
+CHANGELOG = deccc62abfca584bf0672e5b29ba5e21
+README = a1c46572d9d10755a9462b1d54b67410
+CREDITS = 8ce41db28f31d9bda646ba7258967853
+run.bat = a695de096a77455a6dece45f9edf135c
+run.sh = 3ca389c27fd124057321076b632bca30
+run.offline.bat = 8f79ce53faec5ab281b3907b6bf018f0
+run.offline.sh = 6d5a52dd19362b8fa773746364d9f136
+digest.txt = 327207b61e09f6ee2b5b758787c86fe2

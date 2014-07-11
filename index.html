@@ -2,6 +2,7 @@
 	<head>
 		<title>StoryMode - A game about crafting</title>
 		<meta name="description" content="StoryMode is a parody roguelike filesystem dungeon crawler about randomness and crafting"></meta>
+		<link rel="image_src" href="img/thumbnail.png" />
 
 		<link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
@@ -13,7 +14,7 @@
 
 		<script type="text/javascript">
 			$(document).ready(function() {
-				$('#screenshots .screenshots').magnificPopup({
+				$('.screenshots').magnificPopup({
 					delegate: 'a',
 					type: 'image',
 					closeOnContentClick: false,
@@ -40,8 +41,25 @@
 							return openerElement.is('img') ? openerElement : openerElement.find('img');
 					    }
 					}
-					
 				});
+				$('.videos').magnificPopup({
+					delegate: 'a',
+					disableOn: 0,
+					type: 'iframe',
+					mainClass: 'mfp-fade',
+					removalDelay: 160,
+					preloader: false,
+				});
+
+				if(window.location.hash == "#ThankYou")
+				{
+					$('#ThankYou').addClass("visible");
+					console.log("thank you!");
+				}
+
+				$('a[data-target]:not([data-target=""])').click(function(){
+					$('#'+$(this).attr("data-target")).removeClass('visible');
+				})
 			});
 		</script>
 	</head>
@@ -53,14 +71,30 @@
 				<img id="lightning" src="img/lightning.png"></img>
 				<img id="logo" src="img/logo.png"></img>
 				<div id="info">
-					<h4>Coming July 2014</h4>
-					<h5><span>Windows, Mac, Linux<span></h5>
+					<a href="#order"><h4>Download Now</h4></a>
+					<h5><span>Windows, Mac, Linux</span></h5>
 				</div>
 			</div>
 		</section>
 
 		<section id="description">
 			<div class="content">
+				<div class="features">
+					<center>
+					<h2>A game that's packed with cool features like...</h2>
+					<ul>
+						<li>- Randomly generated dungeons -</li>
+						<li>- Randomly generated items -</li>
+						<li>- A cringe worthy story -</li>
+						<li>- A not really fresh take on the genre -</li>
+						<li>- Being able to play with one hand with a beer in the other -</li>
+						<li>- Full tablet input support while not being available for tablets -</li>
+						<li>and...</li>
+						<li style="font-size: 50px;">an Excessive Amount of Color!</li>
+					</ul>
+					<h2>What could it possibly be about?</h2>
+					</center>
+				</div>
 				<div class="terminal">
 					[root@storymode ~] man StoryMode
 					<h3>
@@ -96,28 +130,16 @@
 					</p>
 					<h4>
 						<div class="title">
-							Page 1 / 0
+							Page 1 / 1
 						</div>
 					</h4>
 					<h6>You read it all, now get to crafting</h6>
+				
+					<p></p>
 				</div>
 			</div>
+			
 		</section> 
-		
-		<section id="credits">
-			<div class="content">
-				<h2>Credits</h2>
-				<h3>Graphics & Programming</h3>
-				<h4>Nicholas Hydock<h4>
-				<br/>
-				<h3>Ideas, Suggestions, Emotional Support, and Bros4Lyfe</h3>
-				<h4>Patrick Flanagan<h4>
-				<h4>Matthew Hydock</h4>
-				<h4>Andrew Hoffman<h4>
-				<br/>
-				<h3>All Music Available on FreeMusicArchive.org</h3>
-			</div>
-		</section>
 
 		<section id="screenshots">
 			
@@ -133,42 +155,165 @@
 					<a href="img/screenshots/004.png" title="" ><img src="img/screenshots/004.png" width="175" height="100"></img></a>
 					<a href="img/screenshots/005.png" title="" ><img src="img/screenshots/005.png" width="175" height="100"></img></a>
 					<a href="img/screenshots/006.png" title="" ><img src="img/screenshots/006.png" width="175" height="100"></img></a>
-					<a href="img/screenshots/007.png" title="" ><img src="img/screenshots/007.png" width="175" height="100"></img></a>
 				</div>
 				</center>
 				<h5>*Not all screenshots represent an accuration depiction of the game in its final release state.  Most I took while developing the game and I'm too lazy to update them.  Don't worry, though, there's not much one can really change when making a rougelike.</h5>
 			</div>
 		</section>
-
+		<section id="videos">
+			<div class="content">
+				<h2>
+					Videos
+				</h2>
+				<center>	
+				<div class="videos">
+					<a href="http://www.youtube.com/watch?v=6G8bbRdTbo8" title="Promo Trailer" >
+						<img src="http://img.youtube.com/vi/6G8bbRdTbo8/hqdefault.jpg" width="240" height="180"></img>
+					</a>
+				</div>
+				</center>
+			</div>
+		</section>
 		<section id="order">
 			<div class="content">
 				<h2>
 					Purchase
 				</h2>
 					
+					<center>
 					<p>
-						StoryMode is available at a Name-Your-Price freeware model.  
+						StoryMode is available at a Name-Your-Price freeware model.
 					</p>
 					<p>
-						Payments will not be accepted until the game is officially released.
+						Donating at any time helps support the development of the game in terms of stability, features, content, and motivation
 					</p>
-				
-				<div class="footer">
-					<div class="beta">
-						<a href="builds/getdown-storymode.zip">
-							<h3>
-								<span>Download the Beta</span>
-							</h3>
+
+						<a class="btn" 
+						   href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FC84ZY7VH5J5N" 
+						   style="font-size: 1.2em; vertical-align: middle;">
+							Donate Now
 						</a>
-						<h6>
-							Built July 9th, 2014
-						</h6>
+					</center>
+
+					<div class="sysreq">
+						<h3>
+							<span>System Requirements</span>
+						</h3>
+					
+						<table>
+		                    <thead>
+		                    </thead>
+		                    <tbody>
+		                        <tr>
+		                            <td>Video Card</td>
+		                            <td>Supporting OpenGL ES 2.0</td>
+		                        </tr>
+		                        <tr>
+		                            <td>JVM</td>
+		                            <td>Java 1.7 or higher</td>
+		                        </tr>
+		                        <tr>
+		                            <td>CPU</td>
+		                            <td>I don't even know, I don't have enough hardware to try and benchmark such a thing</td>
+		                        </tr>
+		                        <tr>
+		                        <td>Memory</td><td>512mb</td>
+		                        </tr>
+		                    </tbody>
+					    </table>
 					</div>
+
+				
+				<div class="beta">
+					<h3>
+						<span>Download the Game</span>
+					</h3>
+					<h6>
+						Built July 25th, 2014
+					</h6>
+				</div>
+				<br></br>
+				<div id="download" class="terminal">
+					<p>[root@storymode ~] wget <a href="http://nhydock.github.io/Storymode/builds/getdown-storymode.zip">http://nhydock.github.io/Storymode/builds/getdown-storymode.zip</a></p>
+				</div>
+				
+
+				<div class="footer">
 					<img id="character" src="img/character.png"></img>
 					<img id="goddess" src="img/goddess.png"></img>
 				</div>
 			</div>
 		</section>
 		
+		<section id="credits">
+			<div class="content">
+				<center>
+					<table>
+						<tbody>
+							<tr>
+								<td style="vertical-align: top;">
+									<div class="team">
+										<ul>
+											<h3><span>Graphics, Programming, Project Lead</span></h3>
+											<li>Nicholas Hydock</li>
+										</ul>
+										<br/>
+										<ul>
+											<h3><span>Ideas, Suggestions, Emotional Support, and Bros4Lyfe</span></h3>
+											<li>Patrick Flanagan</li>
+											<li>Matthew Hydock</li>
+											<li>Andrew Hoffman</li>
+										</ul>
+									</div>
+									<center>
+									<a href="http://libgdx.badlogicgames.com/"><img src="img/tools.png"></img></a>
+								</center>
+								</td>
+								<td>
+									<center>
+										<h3><span>All Music Available on FreeMusicArchive.org</span></h3>
+										<ul>
+											Title Theme
+											<li><i>Anamanaguchi</i> - Helix Nebula</li>
+											Town Music
+											<li><i>Monroeville Music Center</i> - B002</li>						
+											Story Music
+											<li><i>Eric Skiff</i> - All of Us</li>
+											Dungeon
+											<li><i>Decktonic</i> - Fair Game</li>
+											<li><i>Sycamore Drive</i> - Kicks</li>
+										</ul>
+										<br/>
+										<h3><span>Sounds Available on FreeSound.org</span></h3>
+										<ul>
+											timgorml
+											<li>8-bit hurt1, 8-bit coin, 8-bit shimmer, 8-bit bump</li>
+											deathbygeko
+											<li>boss fight</li>
+										</ul>
+									</center>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</center>
+			</div>
+		</section>
+
+		<div id="ThankYou">
+			<div>
+				<div class="dialog">
+					<h2>Thank you for your donation!</h2>
+					<p>It really means a lot to me when you donate any amount to the development and support of StoryMode</p>
+					<p>By donating, you help me and my desire to continue making fun, goofy games, as well as creative-commons musicians 
+						through trickle-down distribution of funds as I donate and invest back to all who helped me make this game by providing their
+						services and content for free.</p>
+					<p>There's a lot of places that this game can and might go, and every step appreciates a little bit of
+						backing from people who care, like you.</p>
+					<p>Now go download the game and have fun!</p>
+					<a class="btn" data-target="ThankYou">Close</a>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>

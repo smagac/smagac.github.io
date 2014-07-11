@@ -48,6 +48,44 @@ body, html
   }
 }
 
+@keyframes pulse {
+	0% {
+		opacity: .1;
+	}
+	30% {
+		opacity: 1.0;
+	}
+	70% {
+		opacity: 1.0;
+	}
+	100% {
+		opacity: .1;
+	}
+}
+
+#header .content
+{
+	max-width: 960px;
+	background-image: none;
+	border: 32px solid transparent;
+	border-image:url("../img/window.png") 64 64 repeat;
+	padding: 0px;
+}
+
+#header a
+{
+	text-decoration: none;
+	color: #fff;
+	animation: pulse 3s infinite linear;
+	-moz-animation: pulse 3s infinite linear;
+}
+
+#header h5
+{
+	margin:0px;
+	margin-top: 4px;
+}
+
 #logo
 {
 	top: 0px;
@@ -110,29 +148,23 @@ body, html
 	background: none;
 }
 
-section h2
-{
-	font-family: "alagard", monospace;
-	font-weight: bold;
-	font-size: 4em;
-	background: none;
-	text-shadow: 0px 4px 0px #888;
-	color: #000;
-}
-section:nth-child(odd) h2
-{
-	color: #fff;
-}
-
-.screenshots div
+.screenshots a,
+.videos a
 {
 	background: #fff;
-	opacity: .5;
+	opacity: .8;
 	color: #000;
-	transition: opacity .3s linear;
+	transition: opacity .1s linear;
 }
 
-.screenshots div:hover
+.screenshots img,
+.videos img
+{
+	border: 1px solid white;
+}
+
+.screenshots a:hover,
+.videos a:hover
 {
 	opacity: 1.0;
 }
@@ -142,13 +174,12 @@ section:nth-child(odd) h2
 	background: #000;
 	padding-left: 2px;
 	padding-right 2px;
-	margin:;
 }
 
 #info h5
 {
 	font-family: monospace;	
-	font-size: 1.5em;
+	font-size: 16px;
 }
 
 section
@@ -160,30 +191,24 @@ section
 	background: #000;
 	display: block;
 	font-family: 'Roboto', san-serif;
-}
-
-#header
-{
-	background-image: url("../img/texture.png");
-}
-
-#header .content
-{
-	max-width: 960px;
-	background-image: none;
-	border: 32px solid transparent;
-	border-image:url("../img/window.png") 64 64 repeat;
-	padding: 0px;
+	font-size: 16px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	
 }
 
 section:nth-child(even)
 {
 	color: #000;
 	background: #fff;
-	padding-top: 20px;
-	padding-bottom: 20px;
 	box-shadow: 0px 1px 0px #fff inset,
 				0px 20px 10px -10px rgba(0,0,0,.25) inset;
+}
+
+section:nth-child(odd)
+{
+	color: #fff;
+	background: #000;
 }
 
 section .content
@@ -193,6 +218,23 @@ section .content
 	max-width: 800px;
 	padding: 20px 0px;
 	position: relative;
+	font-size: 18px;
+}
+
+section h2
+{
+	font-family: "alagard", monospace;
+	font-weight: bold;
+	font-size: 4em;
+	background: none;
+	text-shadow: 0px 4px 0px #888;
+	color: #000;
+	margin-bottom: 10px;
+	margin-top: 0px;
+}
+section:nth-child(odd) h2
+{
+	color: #fff;
 }
 
 #description .content
@@ -200,24 +242,54 @@ section .content
 	padding: 0px 0px;
 }
 
+#description h2
+{
+	font-size: 40px;
+	text-shadow: none;
+}
+
+#description .features ul
+{
+	list-style: none;	
+	background-image: url("../img/texture.png");
+	background-repeat: repeat;
+	padding: 15px;
+}
+
+#description .features li
+{
+	font-family:  "alagard", monospace;
+	margin: 0px auto;
+	font-size: 24px;
+	color: white;
+	background: black;
+}
+#description .features li:first-child { padding-top: 10px; }
+#description .features li:last-child { padding-bottom: 10px; }
+
 .terminal
 {
 	border: 2px solid #2d2d2d;
 	background: #000;
 	box-shadow: 0px 3px 5px 3px rgba(0,0,0,.425);
-	color: #fff;
+	color: white !important;
 	padding: 5px;
 	font-family: monospace;
-	font-size: 1.2em;
-	padding-top: 56px;
+	font-size: 14px;
+}
+
+.terminal a, 
+.terminal td
+{
+	color: white;
 }
 
 .terminal:before
 {
 	content: "";
-	position: absolute;
-	top: 0px;
-	left: 0px;
+	position: relative;
+	top: -7px;
+	left: -7px;
 	right: 0px;
 	margin: 0px auto;
 	display: inline-block;
@@ -266,24 +338,63 @@ h6
 	background: none;
 }
 
-#credits h3, #credits h4
+#credits 
 {
-	font-family:  "alagard", monospace;
+	font-family: "Roboto", monospace;
+}
+
+#credits table,
+#credits td,
+#credits th
+{
+	border: 0px solid transparent;
+}
+
+#credits h3, 
+#credits ul
+{
+	font-family:  "Roboto", monospace;
 	margin: 0px auto;
+	list-style: none;
+	font-size: 14px;
+	padding-left: 0px;
 }
 
-#credits h3
+#credits ul,
+#credits li
 {
-	font-size: 1.5em;
+	text-align: center;
 }
 
-#credits h4
+#credits .team
 {
-	font-size: 1.4em;	
+	margin-bottom: 50px;
+}
+
+#credits .team ul,
+#credits .team li
+{
+	text-align: left;
+}
+
+#credits ul li
+{
+	font-size: 12px;
+	margin-left: 0px;
+}
+#credits .team li
+{
 	margin-left: 50px;
 }
 
-#order .beta a
+#credits td
+{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#order .beta h3,
+#order .sysreq h3
 {
 	font-family: 'alagard', monospace;
 	font-color: #fff;
@@ -293,25 +404,24 @@ h6
 	font-variant: normal;
 	text-decoration: none;
 	color: #fff;
+	vertical-align: middle;
 }
 
-#order .beta span
+#order .beta span,
+#order .sysreq span
 {
 	background: #000;
 	padding: 5px;
+	text-align: center;
 }
 
 #order .beta
 {
-	position: absolute;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	top: 16px;
 	text-align: center;
 }
 
-#order .beta h3
+#order .beta h3,
+#order .sysreq h3
 {
 	margin-top: 50px;
 	margin-bottom: 0px;
@@ -319,9 +429,111 @@ h6
 	background-image: url("../img/texture.png");
 	background-repeat: repeat;
 	padding: 0px;
+	text-align: center;
 }
 
 #order .beta h6
 {
 	text-align: unset;
+}
+
+#order .sysreq table
+{
+	border-collapse: collapse;
+	width: 400px;
+	max-width: 100%;
+	margin: 10px auto;
+}
+
+#order .sysreq table, 
+#order .sysreq th, 
+#order .sysreq td
+{
+	color: #fff;
+	border: 1px solid white;
+	padding: 4px;
+}
+
+#order .sysreq tr td:first-child
+{
+	width: 150px;
+}
+
+#ThankYou
+{
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,.5);
+	display: none;
+}
+
+#ThankYou.visible
+{
+	display: block;
+}
+
+#ThankYou > div
+{
+	position: relative;
+	margin: auto auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#ThankYou > div > .dialog
+{
+	position: absolute;
+	margin: auto;
+	padding: 20px;
+	width: 600px;
+	height: 400px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	font-family: 'Roboto', san-serif;
+	background: #fff;
+	border: 1px solid #1af;
+	box-shadow: 0px 20px 5px -8px rgba(0,0,0,.3);
+}
+
+#ThankYou h2
+{
+	font-family: 'Roboto', san-serif;
+	font-size: 2em;
+	text-align: left;
+}
+
+.btn
+{
+	background: #1af;
+	color: #fff;
+	border: 1px solid #1af;
+	padding: 5px;
+	min-width: 100px;
+	font-size: 1.1em;
+	font-family: 'Roboto', san-serif;
+	text-decoration: none;
+	text-align: center;
+	display: inline-block;
+	font-size: initial;
+	text-shadow: none;
+}
+
+.btn:hover
+{
+	background: #fff;
+	color: #1af;
+}
+
+.pull-right
+{
+	float:right;
 }
