@@ -21,8 +21,6 @@ resource = README
 resource = CREDITS
 resource = run.bat
 resource = run.sh
-resource = run.offline.bat
-resource = run.offline.sh
 
 # The main entry point for the application
 class = core.common.SMRunner
