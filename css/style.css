@@ -12,55 +12,50 @@ body, html
     src: url("../fonts/alagard.ttf");
 }
 
+@-webkit-keyframes floating {
+  0% { top: 0px; }
+  50% { top: 10px; }
+  100% { top: 0px; }
+}
+
+@-webkit-keyframes flash {
+  0% { opacity: 0; }
+  90% { opacity: 0; }
+  92% { opacity: 1.0; }
+  94% {	opacity: 0; }
+  96% { opacity: 0; }
+  98% {	opacity: 1.0; }
+  100% { opacity: 0; }
+}
+
+@-webkit-keyframes pulse {
+  0% { opacity: .1; }
+  30% {	opacity: 1.0; }
+  70% {	opacity: 1.0; }
+  100% { opacity: .1; }
+}
+
 @keyframes floating {
-  0% {
-    top: 0px;
-  }
-  50% {
-    top: 10px;
-  }
-  100% {
-    top: 0px;
-  }
+  0% { top: 0px; }
+  50% { top: 10px; }
+  100% { top: 0px; }
 }
 
 @keyframes flash {
-  0% {
-    opacity: 0;
-  }
-  90% {
-  	opacity: 0;
-  }
-  92% {
-    opacity: 1.0;
-  }
-  94% {
-  	opacity: 0;
-  }
-  96% {
-  	opacity: 0;
-  }
-  98% {
-  	opacity: 1.0;
-  }
-  100% {
-  	opacity: 0;
-  }
+  0% { opacity: 0; }
+  90% { opacity: 0; }
+  92% { opacity: 1.0; }
+  94% {	opacity: 0; }
+  96% { opacity: 0; }
+  98% {	opacity: 1.0; }
+  100% { opacity: 0; }
 }
 
 @keyframes pulse {
-	0% {
-		opacity: .1;
-	}
-	30% {
-		opacity: 1.0;
-	}
-	70% {
-		opacity: 1.0;
-	}
-	100% {
-		opacity: .1;
-	}
+  0% { opacity: .1; }
+  30% {	opacity: 1.0; }
+  70% {	opacity: 1.0; }
+  100% { opacity: .1; }
 }
 
 #header .content
@@ -76,8 +71,8 @@ body, html
 {
 	text-decoration: none;
 	color: #fff;
+	-webkit-animation: pulse 3s infinite linear;
 	animation: pulse 3s infinite linear;
-	-moz-animation: pulse 3s infinite linear;
 }
 
 #header h5
@@ -91,8 +86,8 @@ body, html
 	top: 0px;
 	left:0px;
 	position: absolute;
+	-webkit-animation: floating 2s infinite linear;
 	animation: floating 2s infinite linear;
-	-moz-animation: floating 2s infinite linear;
 }
 
 #lightning
@@ -102,8 +97,8 @@ body, html
 	opacity: 0;
 	display: inline;
 	position: absolute;
+	-webkit-animation: flash 12s infinite linear;
 	animation: flash 12s infinite linear;
-	-moz-animation: flash 12s infinite linear;
 }
 
 .footer
@@ -119,8 +114,8 @@ body, html
 	right:0px;
 	display: inline;
 	position: absolute;
+	-webkit-animation: floating 4s infinite linear;
 	animation: floating 4s infinite linear;
-	-moz-animation: floating 4s infinite linear;
 	pointer-events: none;
 }
 
