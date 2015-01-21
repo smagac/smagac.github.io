@@ -363,7 +363,14 @@ h6
 
 #credits .team
 {
-	margin-bottom: 50px;
+	margin-bottom: 20px;
+}
+
+#credits .tools 
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: inline-block;
 }
 
 #credits .team ul,
@@ -386,6 +393,15 @@ h6
 {
 	padding-left: 10px;
 	padding-right: 10px;
+}
+
+#credits li a {
+	text-decoration: none;
+	color: #000;
+}
+
+#credits li a:visited {
+	color: #000;
 }
 
 #order .beta h3,
