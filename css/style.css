@@ -173,7 +173,7 @@ body, html
 
 #info h5
 {
-	font-family: monospace;	
+	font-family: monospace;
 	font-size: 16px;
 }
 
@@ -189,7 +189,7 @@ section
 	font-size: 16px;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	
+
 }
 
 section:nth-child(even)
@@ -245,7 +245,7 @@ section:nth-child(odd) h2
 
 #description .features ul
 {
-	list-style: none;	
+	list-style: none;
 	background-image: url("../img/texture.png");
 	background-repeat: repeat;
 	padding: 15px;
@@ -273,7 +273,7 @@ section:nth-child(odd) h2
 	font-size: 14px;
 }
 
-.terminal a, 
+.terminal a,
 .terminal td
 {
 	color: white;
@@ -333,7 +333,7 @@ h6
 	background: none;
 }
 
-#credits 
+#credits
 {
 	font-family: "Roboto", monospace;
 }
@@ -345,7 +345,7 @@ h6
 	border: 0px solid transparent;
 }
 
-#credits h3, 
+#credits h3,
 #credits ul
 {
 	font-family:  "Roboto", monospace;
@@ -366,7 +366,7 @@ h6
 	margin-bottom: 20px;
 }
 
-#credits .tools 
+#credits .tools
 {
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -456,8 +456,8 @@ h6
 	margin: 10px auto;
 }
 
-#order .sysreq table, 
-#order .sysreq th, 
+#order .sysreq table,
+#order .sysreq th,
 #order .sysreq td
 {
 	color: #fff;
@@ -468,6 +468,18 @@ h6
 #order .sysreq tr td:first-child
 {
 	width: 150px;
+}
+
+#elsewhere
+{
+	float:right;
+	font-size: 18px;
+	text-align: center;
+}
+
+#elsewhere img
+{
+  vertical-align: middle;
 }
 
 #ThankYou
