@@ -378,26 +378,13 @@ h6
 	padding-left: 0px;
 }
 
+#credits h3 {
+	margin: .5em 0;
+	text-align: left;
+}
+
 #credits ul,
 #credits li
-{
-	text-align: center;
-}
-
-#credits .team
-{
-	margin-bottom: 20px;
-}
-
-#credits .tools
-{
-	margin-top: 20px;
-	margin-bottom: 20px;
-	display: inline-block;
-}
-
-#credits .team ul,
-#credits .team li
 {
 	text-align: left;
 }
@@ -407,7 +394,7 @@ h6
 	font-size: 12px;
 	margin-left: 0px;
 }
-#credits .team li
+#credits ul li
 {
 	margin-left: 50px;
 }
@@ -416,6 +403,7 @@ h6
 {
 	padding-left: 10px;
 	padding-right: 10px;
+	vertical-align: top;
 }
 
 #credits li a {
@@ -425,6 +413,12 @@ h6
 
 #credits li a:visited {
 	color: #000;
+}
+
+#credits .notice {
+	display: block;
+	font-size: .55em;
+	margin-top: 2em;
 }
 
 #order .beta h3,
