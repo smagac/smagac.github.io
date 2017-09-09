@@ -368,6 +368,11 @@ h6
 	border: 0px solid transparent;
 }
 
+#credits table 
+{
+	margin: 0 auto;
+}
+
 #credits h3,
 #credits ul
 {
@@ -406,12 +411,12 @@ h6
 	vertical-align: top;
 }
 
-#credits li a {
+#credits a {
 	text-decoration: none;
 	color: #000;
 }
 
-#credits li a:visited {
+#credits a:visited {
 	color: #000;
 }
 
@@ -419,6 +424,10 @@ h6
 	display: block;
 	font-size: .55em;
 	margin-top: 2em;
+}
+
+#credits .tools {
+	text-align: center;
 }
 
 #order .beta h3,
